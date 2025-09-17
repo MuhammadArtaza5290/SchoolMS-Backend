@@ -37,8 +37,7 @@ module.exports.reportdata =  async (req, res) => {
           count++
         }
     })
-    let attendPercentage = (count / attendenceReport.length) * 100
-    
+   let attendPercentage = Number(((count / attendenceReport.length) * 100).toFixed(2));
     function totalMarks(eng, urdu, math, sci){
       return eng+urdu+math+sci
     }
